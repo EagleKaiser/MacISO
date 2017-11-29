@@ -10,7 +10,7 @@ Welcome to MacISO's documentation!
    :maxdepth: 2
    :caption: Contents:
    
-   Introduction
+   Instructions
    
 
 

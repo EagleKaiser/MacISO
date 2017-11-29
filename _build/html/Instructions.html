@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; MacISO  documentation</title>
+  <title>Instructions &mdash; MacISO  documentation</title>
   
 
   
@@ -34,8 +34,9 @@
   
         <link rel="index" title="Index"
               href="genindex.html"/>
-        <link rel="search" title="Search" href="#"/>
-    <link rel="top" title="MacISO  documentation" href="index.html"/> 
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="MacISO  documentation" href="index.html"/>
+        <link rel="prev" title="Welcome to MacISO’s documentation!" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -67,7 +68,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -85,8 +86,11 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Instructions.html">Instructions</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -131,10 +135,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Instructions</li>
     
     
       <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Instructions.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -146,19 +154,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="instructions">
+<h1>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">Download macOS High Sierra from Itunes</p>
+<blockquote>
+<div><p><a class="reference external" href="https://itunes.apple.com/us/app/macos-high-sierra/id1246284741?mt=12">Download from Itunes</a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Run these commands in terminal one at a time</p>
+<blockquote>
+<div><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">hdiutil create -o /tmp/HighSierra.cdr -size 5200m -layout SPUD -fs HFS+J</span>
+<span class="go">hdiutil attach /tmp/HighSierra.cdr.dmg -noverify -mountpoint /Volumes/install_build</span>
+<span class="go">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/install_build</span>
+<span class="go">mv /tmp/HighSierra.cdr.dmg ~/Desktop/InstallSystem.dmg</span>
+<span class="go">hdiutil detach /Volumes/Install\ macOS\ High\ Sierra</span>
+<span class="go">hdiutil convert ~/Desktop/InstallSystem.dmg -format UDTO -o ~/Desktop/HighSierra.iso</span>
+</pre></div>
+</div>
+<p>Sample result 1:</p>
+<blockquote>
+<div><img alt="_images/SampleOutput1.png" src="_images/SampleOutput1.png" />
+</div></blockquote>
+<p>Sample result 2:</p>
+<blockquote>
+<div><img alt="_images/SampleOutput2.png" src="_images/SampleOutput2.png" />
+</div></blockquote>
+<p>Resulting file:</p>
+<blockquote>
+<div><img alt="_images/ResultFile.png" src="_images/ResultFile.png" />
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first">Rename the file by removing .cdr from the end and confirm using .iso</p>
+<blockquote>
+<div><img alt="_images/RenameToISO.png" src="_images/RenameToISO.png" />
+<p>Result File:</p>
+<blockquote>
+<div><img alt="_images/FinalFile.PNG" src="_images/FinalFile.PNG" />
+</div></blockquote>
+</div></blockquote>
+</li>
+</ol>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><a class="reference external" href="https://tylermade.net/2017/10/05/how-to-create-a-bootable-iso-image-of-macos-10-13-high-sierra-installer/">Link</a></div></blockquote>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            <div class="articleComments">
@@ -166,6 +210,13 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to MacISO’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -204,7 +255,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -220,14 +270,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
