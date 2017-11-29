@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["Introduction","index"],envversion:53,filenames:["Introduction.rst","index.rst"],objects:{},objnames:{},objtypes:{},terms:{content:1,index:1,introduct:1,modul:1,page:1,search:1},titles:["Introduction","Welcome to MacISO\u2019s documentation!"],titleterms:{document:1,indic:1,introduct:0,maciso:1,tabl:1,welcom:1}})
