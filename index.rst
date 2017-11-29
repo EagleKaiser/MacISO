@@ -11,7 +11,7 @@ Welcome to MacISO's documentation!
    :caption: Contents:
    
    Instructions
-   
+   Installation
 
 
 Indices and tables
